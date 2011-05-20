@@ -6,7 +6,71 @@
   <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
   <%= csrf_meta_tag %>
 </head>
+
+<header id="banner" class="body">
+  <h1><a href="#">OmniNet! <strong>Soluciones Integrales</strong></a></h1>
+  <nav><ul class="list">
+    <li class="active"><a href="#">INICIO</a></li>
+    <li><a href="#">SERVICIOS</a></li>
+    <li><a href="#">CONTACTO</a></li>
+    <li><a href="#">NOSOTROS</a></li>
+  </ul>
+  </nav>
+</header>
+
+<aside id="featured" class="body"><article>
+  <figure>
+    <%= image_tag 'images/logo.png', :alt => 'OmniNet' %>
+  </figure>
+  <hgroup>
+    <h2>¡Tu mejor opción!</h2>
+    <h3>Absolutamente garantizado</h3>
+  </hgroup>
+  <p>Somos una empresa encargada de realizar diagnóstico e implementación de redes estructuradas, tomando como
+  referencia certificaciones de alta calidad y de renombre mundial, como <a href="http://www.cisco.com" rel="external">CCNA</a>.</p>
+</article></aside>
+
 <body>
   <%= yield %>
 </body>
+
+<section id="extras" class="body">
+
+  <div class="blogroll">
+    <h2>Enlaces</h2>
+    <ul class="list">
+      <li><a href="http://itesrc.edu.mx" rel="external">ITESRC</a></li>
+      <li><a href="htt://www.cisco.com" rel="external">Cisco</a></li>
+      <li><a href="http://google.com" rel="external">Google</a></li>
+
+      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <!-- Agregar más -->
+    </ul>
+  </div><!-- blogroll -->
+
+  <div class="social">
+    <h2>Social</h2>
+    <ul class="list">
+      <li><a href="http://facebook.com" rel="me">Facebook</a></li>
+      <li><a href="http://twitter.com" rel="me">Facebook</a></li>
+      <li><a href="http://youtube.com" rel="me">Facebook</a></li>
+      <li><a href="http://aquidebeirelfeed.com" rel="alternate">RSS</a></li>
+    </ul>
+
+  </div>
+</section>
+
+<footer id="contentinfo" class="body">
+  <address id="about" class="vcard body">
+    <span class="primary">
+      <strong><a ref="#">OmniNet</a></strong>
+
+      <span class="role">Soluciones Integrales</span>
+    </span>
+    <%= image_tag 'images/small_logo.png', :alt => "OmniNet" %>
+    <span class="bio">Aquí va la descripción general de la empresa</span>
+  </address>
+  <p>2011 <%= link_to 'OmniNet', '#' %></p>
+</footer>
 </html>
+
