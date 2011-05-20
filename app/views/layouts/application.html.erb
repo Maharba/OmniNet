@@ -2,12 +2,12 @@
 <html>
 <head>
   <title><%= title %></title>
-  <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+  <%= stylesheet_link_tag 'blueprint/custom.css' %>
+<!--  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %> -->
   <%= csrf_meta_tag %>
 </head>
 
-<header id="banner" class="body">
+<header id="banner" >
   <h1><a href="#">OmniNet! <strong>Soluciones Integrales</strong></a></h1>
   <nav><ul class="list">
     <li class="active"><a href="#">INICIO</a></li>
@@ -18,9 +18,9 @@
   </nav>
 </header>
 
-<aside id="featured" class="body"><article>
+<aside id="featured" ><article>
   <figure>
-    <%= image_tag 'images/logo.png', :alt => 'OmniNet' %>
+    <%= image_tag 'logo.png', :alt => 'OmniNet', :width => '300', :height => '205' %>
   </figure>
   <hgroup>
     <h2>¡Tu mejor opción!</h2>
@@ -34,16 +34,28 @@
   <%= yield %>
 </body>
 
-<section id="extras" class="body">
+<section id="extras" >
 
   <div class="blogroll">
     <h2>Enlaces</h2>
-    <ul class="list">
+    <ul>
       <li><a href="http://itesrc.edu.mx" rel="external">ITESRC</a></li>
       <li><a href="htt://www.cisco.com" rel="external">Cisco</a></li>
       <li><a href="http://google.com" rel="external">Google</a></li>
 
       <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+
+      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+
+      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+
+
       <!-- Agregar más -->
     </ul>
   </div><!-- blogroll -->
@@ -60,14 +72,14 @@
   </div>
 </section>
 
-<footer id="contentinfo" class="body">
+<footer id="contentinfo" >
   <address id="about" class="vcard body">
     <span class="primary">
       <strong><a ref="#">OmniNet</a></strong>
 
       <span class="role">Soluciones Integrales</span>
     </span>
-    <%= image_tag 'images/small_logo.png', :alt => "OmniNet" %>
+    <%= image_tag 'small_logo.png', :alt => "OmniNet", :width => '75', :height => '55' %>
     <span class="bio">Aquí va la descripción general de la empresa</span>
   </address>
   <p>2011 <%= link_to 'OmniNet', '#' %></p>
