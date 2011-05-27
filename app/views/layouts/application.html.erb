@@ -2,9 +2,35 @@
 <html>
 <head>
   <title><%= title %></title>
-  <%= stylesheet_link_tag 'blueprint/custom.css' %>
+  <%= stylesheet_link_tag 'blueprint/custom.css', :media => 'screen' %>
 <!--  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %> -->
+  
+  <!-- jQuery -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  
+  <!-- AnythingSlider Plugins (optional) -->
+  <script type="text/javascript" src="javascripts/jquery.easing.1.2.js"></script>
+  <script type="text/javascript" src="javascripts/swfobject.js"></script>
+  
+  <!-- AnythingSlider -->
+  <script type="text/javascript" src="javascripts/jquery.anythingslider.js"></script>
+  
+  <!-- Temas de AnythingSlider -->
+  <%= stylesheet_link_tag 'anythingslider/anythingslider', :media => 'screen' %>
+  <%= stylesheet_link_tag 'anythingslider/theme-metallic', :media => 'screen' %>
+  <%= stylesheet_link_tag 'anythingslider/theme-minimalist-round', :media => 'screen' %>
+  <%= stylesheet_link_tag 'anythingslider/theme-minimalist-square', :media => 'screen' %>
+  <%= stylesheet_link_tag 'anythingslider/theme-construction', :media => 'screen' %>
+  <%= stylesheet_link_tag 'anythingslider/thee-cs-portfolio', :media => 'screen' %>
+  
   <%= csrf_meta_tag %>
+  
+  <script type="text/javascript">
+    $(function () {
+      $('#slider1').anythingSlider();
+    });
+  </script>
+
 </head>
 
 <header id="banner" >
