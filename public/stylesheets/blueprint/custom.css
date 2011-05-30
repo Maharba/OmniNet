@@ -4,8 +4,7 @@ body {
   background: #F5F4EF url('..images/bg.png');
   color: #000305;
   font-size: 87.5%;
-  font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.429;
   margin: 0;
   padding: 0;
@@ -40,7 +39,7 @@ body {
   /* Paragraphs */
   p { margin-bottom: 1.143em; }
   * p:last-child { margin-bottom: 0; }
-
+banner
   strong, b {font-weight: bold; }
   em, i { font-style: italic; }
 
@@ -171,7 +170,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 /*
 	    Featured
 	*****************/
-#featured {
+.featured {
     background: #fff;
     margin-bottom: 2em;
     overflow: hidden;
@@ -182,18 +181,18 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
 }
-#featured figure {
+.featured figure {
     border: 2px solid #eee;
     float: right;
     margin: 0.786em 2em 0 5em;
     width: 248px;
 }
-#featured figure img {display: block; float: right;}
-#featured h2 {color: #0174FF; font-size: 1.714em; margin-bottom: 0.333em;}
-#featured h3 {font-size: 1.429em; margin-bottom: .5em;}
+.featured figure img {display: block; float: right;}
+.featured h2 {color: #0174FF; font-size: 1.714em; margin-bottom: 0.333em;}
+.featured h3 {font-size: 1.429em; margin-bottom: .5em;}
 
-#featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
-#featured h3 a:hover, #featured h3 a:active {color: #fff;}
+.featured h3 a:link, .featured h3 a:visited {color: #000305; text-decoration: none;}
+.featured h3 a:hover, .featured h3 a:active {color: #fff;}
 
 /*
     Body
