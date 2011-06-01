@@ -10,5 +10,13 @@ class PagesController < ApplicationController
   def about
     @title = "Nosotros"
   end
+
+  def diagnostico
+    @title = "Diagnostico"
+  end
+
+  def cableado
+    @title = "Planes de cableado"
+  end
 end
 

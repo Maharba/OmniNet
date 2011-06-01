@@ -7,6 +7,8 @@ OmniNet::Application.routes.draw do
 
   get "pages/cableado"
 
+  get "pages/diagnostico"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

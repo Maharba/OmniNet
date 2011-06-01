@@ -50,14 +50,14 @@
   <h1><a href="#">OmniNet <strong>Open Your World</strong></a></h1>
   <nav id="navContainer">
 		<ul class="clear" id="nav">
-			<li class="first"><a href="#">Inicio</a></li>
+			<li class="first"><%= link_to 'Inicio', 'home' %></li>
 			<li><a href="#">Servicios</a>
 			  <div class="dropDown"> <!-- You can copy/paste these complete dropDown divs after any of the top level links for more dropdowns (as many as you want) -->
 					<div class="top"></div> <!-- This creates the drop shadow effect at the top of the drop down menu -->
 					<div class="items">
 						<ul>
-							<li class="first"><a href="#">Cableado</a></li>
-							<li><a href="#">Diagnóstico</a></li>
+							<li class="first"><%= link_to 'Cableado', 'cableado' %></li>
+							<li><%= link_to 'Diagnóstico', 'diagnostico' %></li>
 							<li class="last"><a href="#">not fucking idea</a></li>
 							<!-- You can add as many of these list items as you like; or remove or edit obviously -->
 						</ul>
