@@ -1,0 +1,2 @@
+class CableadoController < ApplicationController
+end
