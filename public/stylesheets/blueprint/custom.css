@@ -1,19 +1,87 @@
-/* Body */
+/*
+HTML/CSS/JS'ified adaption by Joe Pettersson @ JoePettersson.com
+Original concept and art by Orman Clark @ http://www.premiumpixels.com/
+
+The contents of this template are in the public domain, and therefore require no attribution (although
+it's always appreciated!) and can be used commercially and modified in any way you choose.
+*/
+
+/***** Global Elements *****/
+html, body { border:0; margin:0; padding:0; }
+body { font:12px "Helvetiva Neue", Helvetica, Arial, sans serif; background: url(../img/body-background.jpg) repeat;}
+
+img { border:0;}
+a img { border:0 } /* This stops link bordering on images */
+
+a, a:link, a:visited { text-decoration:underline;}
+a:hover, a:active {text-decoration: none;}
+
+.wrapper { width:785px; margin:0 auto;}
+.credit {margin-top: 40px; font-size: 11px; color: #d1d1d1;}
+.credit a {color: #d1d1d1;}
+
+/***** BEGIN Regular Nav CSS *****/
+.clear:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clear { display: inline-block; }
+html[xmlns] .clear { display: block;}
+* html .clear { height: 1%;}
+#navContainer { margin-left: 5%; margin-top: 50px;}
+#navContainer ul {padding: 0px;}
+#navContainer li {float: left; list-style: none; background-image: url(../img/nav-sprite.png); background-repeat: no-repeat; padding: 1px 0px; position: relative;}
+#navContainer li {background-position: -10px 0px;}
+#navContainer li.last {background-position: top right; padding-right: 1px;}
+#navContainer li.last a {border-right: 0px}
+#navContainer li.first {background-position: 0 0; padding-left: 1px;}
+#navContainer li.first a {border-left: 0px}
+
+#navContainer li a {display: block; padding: 17px 21px 16px; text-decoration: none; font-size: 12px; color: #555; text-shadow: 2px 2px 1px #fff; -moz-text-shadow: 2px 2px 1px #fff; -webkit-text-shadow: 2px 2px 1px #fff; -o-text-shadow: 2px 2px 1px #fff; letter-spacing: 1px; border-right: 1px solid #dbdbdb; border-left: 1px solid #fbfbfb;}
+#navContainer li a:hover, #navContainer li.active a {background: url(../img/hov-bg.png) repeat;}
+/* Drop down */
+#navContainer .dropDown { z-index: 9; position: absolute; left: -1px; top: 50px; border: 1px solid #e0e0e0; border-top: 0px; width: 150px; background: #f9f9f9; padding-bottom: 5px; display: none; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; -moz-border-bottom-left-radius: 4px; -moz-border-bottom-right-radius: 4px;}
+#navContainer .dropDown ul { padding: 0px;}
+#navContainer .dropDown li { background: none; border: 0px; width: 110px; float: none; padding: 0px;}
+#navContainer .dropDown li a { background: none; border: 0px; margin: 0px 20px; padding: 15px 0px; border-bottom: 1px solid #e3e3e3;width: 110px; border-top: 1px solid #fff;}
+#navContainer .dropDown li a:hover { color: #a1a1a1;}
+#navContainer .dropDown li.first a { border-top: 0px;}
+#navContainer .dropDown li.last a { border-bottom: 0px;}
+/***** END Regular Nav CSS *****/
+
+
+#mainwrapper {
+  background: #fcfcfc;
+  padding: 0px;
+}
+
 body {
 
-  background: #F5F4EF url('..images/bg.png');
-  color: #000305;
-  font-size: 87.5%;
+background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(214,214,214)),
+    color-stop(0.18, rgb(255,255,255)),
+    color-stop(0.62, rgb(250,250,250)),
+    color-stop(1, rgb(173,212,227))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(214,214,214) 0%,
+    rgb(255,255,255) 18%,
+    rgb(250,250,250) 62%,
+    rgb(173,212,227) 100%
+);
+
+  color: #99999E;
+  font-size: 14px;
   font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.429;
   margin: 0;
   padding: 0;
   text-align: left;
 }
 
   /* Headings */
-  h2 { font-size: 1.571em }
-  h3 { font-size: 1.429em }
+  h2 { font-size: 1.571em; }
+  h3 { font-size: 1.429em; }
 
   h2, h3 {
     font-weight: 400;
@@ -46,8 +114,9 @@ banner
   ::-moz-selection { background: #F6CF74; color: #fff; }
   ::selection { background: #F6CF74; color: #fff; }
 
+
   /* Lists */
-  ul {
+/*  ul {
     list-style: outside disc;
     margin: 1em 0 1.5em 1.5em;
   }
@@ -60,17 +129,18 @@ banner
   dl { margin: 0 0 1.5em 0; }
   dt { font-weight: bold; }
   dd { margin-left: 1.5em; }
-
+*/
   /* Quotes */
   blockquote { font-style: italic; }
   cite {}
   q{}
 
   /* Tables */
-  table { margin: .5em auto 1.5em auto; width: 98%; }
+  table { margin: 2.5em auto 3.5em 90px; width: 80%; }
 
     /* Thead */
-    thead th { padding: .5em .4em; text-align: left; }
+    caption { font-size: 24px;, font-weight: bold; text-decoration: underline; padding: 20px; }
+    thead th { text-decoration: underline; font-size: 17px; padding: .5em .4em; text-align: left; font-weight: normal; }
     thead td {}
 
     /* Tbody */
@@ -100,14 +170,20 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
   Header
 ****************/
 #banner {
+     background-image: url(../img/header.png);
+     background-repeat: no-repeat;
+     text-shadow: 1px 1px 3px #DEF6FF;
+}
+
+#banner {
    margin: 0 auto;
    padding: 2.5em 0 0 0;
 }
 
     /* Banner */
-#banner h1 {font-size: 3.571em; line-height: .6;}
+#banner h1 {font-size: 50px; line-height: .6;}
 #banner h1 a:link, #banner h1 a:visited {
-     color: #000305;
+     color: #24A3D2;
      display: block;
      font-weight: bold;
      margin: 0 0 .6em .2em;
@@ -116,14 +192,14 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
  }
 #banner h1 a:hover, #banner h1 a:active {
     background: none;
-    color: #0174DF;
-    text-shadow: none;
+    /*color: #0174DF;*/
+    text-shadow: 0 0 3px #0174DF;
 }
 #banner h1 strong {font-size: 0.36em; font-weight: normal; }
 
 
-
-/* Main Nav */
+/*
+ Main Nav
 #banner nav {
     background: #000305;
     font-size: 1.143em;
@@ -165,34 +241,54 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
     -moz-border-radius-bottomleft: 5px;
     -webkit-border-bottom-left-radius: 5px;
 }
-
+*/
 
 /*
 	    Featured
 	*****************/
+
+
 .featured {
-    background: #fff;
-    margin-bottom: 2em;
+    background: #fcfcfc;
+/*    margin-bottom: 2em;*/
     overflow: hidden;
     padding: 20px;
-    width: 760px;
+    width: 750px;
+    color: #fcfcfc;
+    text-shadow: 2px 2px 5px #111;
+
+background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.09, rgb(235,235,235)),
+    color-stop(0.55, rgb(255,255,255))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(235,235,235) 9%,
+    rgb(255,255,255) 55%
+);
 
     border-radius: 10px;
+    border: 2px solid #f1f1f1;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
 }
 .featured figure {
-    border: 2px solid #eee;
+    border: 3px solid #e1e1e1;
     float: right;
-    margin: 0.786em 2em 0 5em;
-    width: 248px;
+/*    margin: 0.786em 2em 0 5em;*/
+/*    width: 248px;*/
 }
 .featured figure img {display: block; float: right;}
-.featured h2 {color: #0174FF; font-size: 1.714em; margin-bottom: 0.333em;}
-.featured h3 {font-size: 1.429em; margin-bottom: .5em;}
+.featured h2 {color: #0174FF; font-size: 59px; margin-bottom: 0.333em;}
+.featured h3 {font-size: 37px; margin-bottom: .5em;}
 
 .featured h3 a:link, .featured h3 a:visited {color: #000305; text-decoration: none;}
 .featured h3 a:hover, .featured h3 a:active {color: #fff;}
+
+.featured p { text-shadow: none;  color: #696969; }
 
 /*
     Body
@@ -268,7 +364,8 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
    About
 *****************/
 #about {
-    background: #fff;
+    background: #f1f1f1;
+    color: #6d6d6d;
     font-style: normal;
     margin-bottom: 2em;
     overflow: hidden;

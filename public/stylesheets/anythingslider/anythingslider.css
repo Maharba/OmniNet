@@ -37,10 +37,10 @@ div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {
 
 /* Active State */
 div.anythingSlider.activeSlider .anythingWindow {
-	border-color: #7C9127;
+	border-color: #FCFCFC;
 }
 div.anythingSlider.activeSlider .thumbNav a.cur, div.anythingSlider.activeSlider .thumbNav a {
-	background-color: #7C9127;
+	background-color: #B6B6B6;
 }
 div.anythingSlider .start-stop {
 	background-color: #080;
@@ -115,7 +115,7 @@ div.anythingSlider .anythingControls { outline: 0; display: none; }
 div.anythingSlider .thumbNav { margin: 0; padding: 0; }
 div.anythingSlider .thumbNav li { display: inline; }
 div.anythingSlider .thumbNav a {
-	font: 11px/18px Georgia, Serif;
+	font: 11px/18px Arial, Serif;
 	display: inline-block;
 	text-decoration: none;
 	padding: 2px 8px;
@@ -166,3 +166,4 @@ div.anythingSlider, div.anythingSlider .anythingWindow, div.anythingSlider .thum
 	-moz-transition-duration: 0;
 	-webkit-transition-duration: 0;
 }
+

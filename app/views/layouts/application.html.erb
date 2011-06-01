@@ -4,17 +4,17 @@
   <title><%= title %></title>
   <%= stylesheet_link_tag 'blueprint/custom.css', :media => 'screen' %>
 <!--  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %> -->
-  
+
   <!-- jQuery -->
-  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js' %>  
-  
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js' %>
+
   <!-- AnythingSlider Plugins (optional) -->
   <%= javascript_include_tag 'jquery.easing.1.2.js' %>
   <%= javascript_include_tag 'swfobject.js' %>
-  
+
   <!-- AnythingSlider -->
   <%= javascript_include_tag 'jquery.anythingslider.js' %>
-  
+
   <!-- Temas de AnythingSlider -->
   <%= stylesheet_link_tag 'anythingslider/anythingslider', :media => 'screen' %>
   <%= stylesheet_link_tag 'anythingslider/theme-metallic', :media => 'screen' %>
@@ -22,26 +22,55 @@
   <%= stylesheet_link_tag 'anythingslider/theme-minimalist-square', :media => 'screen' %>
   <%= stylesheet_link_tag 'anythingslider/theme-construction', :media => 'screen' %>
   <%= stylesheet_link_tag 'anythingslider/thee-cs-portfolio', :media => 'screen' %>
-  
+
   <%= csrf_meta_tag %>
-  
+
   <script type="text/javascript">
     $(function () {
-      $('#slider1').anythingSlider();
+      $('#slider1').anythingSlider({
+        startText : "Ver",
+        stopText  : "Ver"
+      });
+    });
+  </script>
+
+  <!-- Navigation -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#nav li').hover(function () {
+        $(this).find('.dropDown').slideToggle(200);
+    		$(this).toggleClass('active');
+      });
     });
   </script>
 
 </head>
-
+<div id="mainwrapper">
 <header id="banner" >
-  <h1><a href="#">OmniNet! <strong>Soluciones Integrales</strong></a></h1>
-  <nav><ul class="list">
-    <li class="active"><a href="#">INICIO</a></li>
-    <li><a href="#">SERVICIOS</a></li>
-    <li><a href="#">CONTACTO</a></li>
-    <li><a href="#">NOSOTROS</a></li>
-  </ul>
-  </nav>
+  <h1><a href="#">OmniNet <strong>Open Your World</strong></a></h1>
+  <nav id="navContainer">
+		<ul class="clear" id="nav">
+			<li class="first"><a href="#">Inicio</a></li>
+			<li><a href="#">Servicios</a>
+			  <div class="dropDown"> <!-- You can copy/paste these complete dropDown divs after any of the top level links for more dropdowns (as many as you want) -->
+					<div class="top"></div> <!-- This creates the drop shadow effect at the top of the drop down menu -->
+					<div class="items">
+						<ul>
+							<li class="first"><a href="#">Cableado</a></li>
+							<li><a href="#">Diagnóstico</a></li>
+							<li class="last"><a href="#">not fucking idea</a></li>
+							<!-- You can add as many of these list items as you like; or remove or edit obviously -->
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li><a href="#">Nosotros</a></li>
+			<li><a href="#">Portafolio</a></li>
+			<li><a href="#">Atención a Clientes</a></li>
+			<li><a href="#">Blog</a></li>
+			<li class="last"><a href="#">Contacto</a></li>
+		</ul>
+	</nav>
 </header>
 
 <body>
@@ -57,16 +86,16 @@
       <li><a href="htt://www.cisco.com" rel="external">Cisco</a></li>
       <li><a href="http://google.com" rel="external">Google</a></li>
 
-      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
-      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
-      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <li><a href="http://yahoo.com" rel="external">Yahoo!</a></li>
+      <li><a href="http://microsoft.com" rel="external">Microsoft</a></li>
+      <li><a href="http://msn.com" rel="external">MSN</a></li>
 
-      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
-      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
-      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <li><a href="http://mozilla.com" rel="external">Mozilla</a></li>
+      <li><a href="http://ubuntu.com" rel="external">Ubuntu</a></li>
+      <li><a href="http://bing.com" rel="external">Bing</a></li>
 
-      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
-      <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
+      <li><a href="http://apple.com" rel="external">Apple</a></li>
+      <li><a href="http://xpress.com.mx" rel="external">Xpress Hosing</a></li>
       <li><a href="http://blog.exolimpo.com" rel="external">Exolimpo</a></li>
 
 
@@ -77,10 +106,9 @@
   <div class="social">
     <h2>Social</h2>
     <ul class="list">
-      <li><a href="http://facebook.com" rel="me">Facebook</a></li>
-      <li><a href="http://twitter.com" rel="me">Facebook</a></li>
-      <li><a href="http://youtube.com" rel="me">Facebook</a></li>
-      <li><a href="http://aquidebeirelfeed.com" rel="alternate">RSS</a></li>
+      <li><%= image_tag 'fb.png', :alt => "Facebook icon" %><a href="http://facebook.com" rel="me">Facebook</a></li>
+      <li><%= image_tag 'tw.png', :alt => "Twitter icon" %><a href="http://twitter.com" rel="me">Twitter</a></li>
+      <li><%= image_tag 'rss.png', :alt => "RSS icon" %><a href="http://aquidebeirelfeed.com" rel="alternate">RSS</a></li>
     </ul>
 
   </div>
@@ -91,12 +119,15 @@
     <span class="primary">
       <strong><a ref="#">OmniNet</a></strong>
 
-      <span class="role">Soluciones Integrales</span>
+      <span class="role">Open Your World</span>
     </span>
     <%= image_tag 'small_logo.png', :alt => "OmniNet", :width => '75', :height => '55' %>
-    <span class="bio">Aquí va la descripción general de la empresa</span>
+    <span class="bio">Av. Sabinal y Gómez Farías, Sabinas.Coah.<br />
+    Tel. (01) 861 6145 21 01<br />
+    E-Mail omninet@live.com.mx</span>
   </address>
-  <p>2011 <%= link_to 'OmniNet', '#' %></p>
+  <p><%= Time.now.year %> <%= link_to 'OmniNet', '#' %> | HTML5 & CSS3 Válido | Tema por Abraham Chacón Landois | Todos los derechos reservados.</p>
 </footer>
+</div> <!-- mainwrapper -->
 </html>
 
